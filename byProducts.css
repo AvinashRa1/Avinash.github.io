@@ -43,7 +43,6 @@ body{
     line-height: 2;
     background-color: rgba(65, 204, 76, 0.589);
     border-radius: 10px;
-    text-align: justify;
 }
 
 .flex-top{
@@ -53,6 +52,7 @@ body{
 .flex-top p{
     margin-right: 15px;
     margin-left: 10px;
+    text-align: justify;
 }
 
 .product_img{
@@ -72,6 +72,7 @@ body{
 .flex-mid{
     margin-top: 30px;
     width: 80%;
+    text-align: justify;
 }
 
 .flex-mid p, .flex-bot p{

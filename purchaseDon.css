@@ -18,6 +18,10 @@ body{
     line-height: 2.5;
 }
 
+#justify{
+    text-align: justify;
+}
+
 .para_don{
     margin-left: 20%;
     margin-bottom: 15px;

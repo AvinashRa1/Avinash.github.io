@@ -50,7 +50,12 @@ body{
 .ozone_img{
     height: 125px;
     width: 125px;
-    margin-right: 50%;
+    margin-right: 30%;
+    margin-left: 50px;
+}
+
+#para{
+    width: 20%;
 }
 
 .fourth_img{
@@ -96,8 +101,9 @@ body{
         line-height: 1.6;
         font-size: 14px;
     }
-    #id{
-        text-align: center;
+    #para{
+        text-align: justify;
+        width: 90%;
     }
     .img-fluid{
         width: 90%;

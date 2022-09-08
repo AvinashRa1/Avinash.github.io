@@ -103,12 +103,16 @@ nav ul ul li a{
         margin-right: 10px;
         float: left;
     }
+    nav .logo{
+        margin-left: 75px;
+    }
     .logo img{
         width: 100%;
     }
     nav ul li, nav ul ul li{
         display: block;
         width: 100%;
+        text-align: center;
     }
     nav ul ul{
         top: 5px;

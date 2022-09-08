@@ -23,6 +23,10 @@ body{
     display: flex;
 }
 
+#justify{
+    text-align: justify;
+}
+
 .para_sales01{
     margin-left:22%;
     padding-right: 20px;

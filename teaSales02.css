@@ -22,13 +22,16 @@ body{
     display: flex;
 }
 
+#justify{
+    text-align: justify;
+}
+
 .para_sales01{
     margin-left:22%;
     padding-right: 20px;
     margin-top: 1%;
     width: 40%;
     line-height: 1.9;
-    text-align: justify;
 }
 
 .para2_sales01{
@@ -36,7 +39,6 @@ body{
     margin-top: 1%;
     width: 55%;
     line-height: 1.9;
-    text-align: justify;
 }
 
 .para_sales01, .para2_sales01, .desc{
@@ -76,7 +78,6 @@ body{
     background-color: rgba(243, 178, 57, 0.788);
     padding: 0 10px;
     box-shadow: 0 0 10px var(--fifth-color);
-    text-align: justify;
 }
 
 .flex_prod1{
@@ -89,7 +90,6 @@ body{
     background-color: rgba(243, 178, 57, 0.788);
     padding: 0 10px;
     box-shadow: 0 0 10px var(--fifth-color);
-    text-align: justify;
 }
 
 .flex_prod2{
@@ -102,7 +102,6 @@ body{
     background-color: rgba(243, 178, 57, 0.788);
     padding: 0 10px;
     box-shadow: 0 0 10px var(--fifth-color);
-    text-align: justify;
 }
 
 .flex_prod:hover, .flex_prod1:hover, .flex_prod2:hover{
@@ -197,7 +196,7 @@ body{
         margin-left: 10px;
     }
     .second_img{
-        margin-left: 25%;
+        margin-left: 10%;
     }
     .prod_head{
         margin-left: 80px;
