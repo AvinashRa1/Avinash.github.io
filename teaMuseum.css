@@ -1,0 +1,123 @@
+body{
+    background-color: rgba(156, 229, 150, 0.758);
+}
+
+.img-fluid_mus{
+    width: 70%;
+    max-height: 45em;
+    margin-left: 16%;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.img-fluid_mus2{
+    width: 500px;
+    height: auto;
+    margin-left: 20%;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+.heading_mus{
+    margin: 0 19%;
+    padding-top: -1%;
+    color: var(--third-color);
+    font-size: 25px;
+    line-height: 2.5;
+}
+
+.sub-heading_mus{
+    margin-left: 15%;
+    color: var(--sixth-color);
+    font-size: 20px;
+    line-height: 2.5;
+}
+
+.para_mus{
+    margin-left: 20%;
+    margin-top: .1em;
+    width: 60%;
+    line-height: 1.9;
+    text-align: justify;
+}
+
+.flex-container{
+    display: flex;
+    margin-left: 15%;
+}
+
+.flex-container2{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    background-color: var(--fourth-color);
+    border-radius: 10px;
+}
+
+.loc_mus{
+    margin-left: 20%;
+    padding-bottom: 1%;
+    width: 30%;
+    height: 350px;
+    border-radius: 10px;
+}
+
+@media all and (max-width: 1197px) {
+    .img-fluid_mus2{
+        width: 300px;
+        margin-left: 15px;
+    }
+    .flex-container{
+        flex-direction: column;
+        margin: 0;
+    }
+    .flex-container img{
+        margin-left: 35%;
+    }
+    .flex-container2{
+        flex-direction: column;
+        width: 60%;
+        padding: 10px;
+        margin-left: 20%;
+    }
+    .loc_mus{
+        width: 70%;
+        margin-left: 15%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+}
+
+@media all and (max-width: 800px) {
+    .img-fluid_mus{
+        width: 90%;
+        margin-left: 15px;
+    }
+    .img-fluid_mus2{
+        width: 90%;
+        margin-left: 10px;
+    }
+    .heading_mus{
+        width: 90%;
+        margin-left: 5%;
+    }
+    .para_mus, .loc_mus{
+        width: 90%;
+        margin-left: 5%;
+        line-height: 1.9;
+        font-size: 14px;
+    }
+    .flex-container{
+        flex-direction: column;
+        margin: 0;
+    }
+    .flex-container img{
+        margin-left: 15px;
+    }
+    .flex-container2{
+        flex-direction: column;
+        width: 90%;
+        padding: 10px;
+        margin-left: 15px;
+    }
+}
