@@ -101,6 +101,9 @@ body{
         width: 90%;
         margin-left: 5%;
     }
+    .sub-heading_mus{
+        margin-left: 10px;
+    }
     .para_mus, .loc_mus{
         width: 90%;
         margin-left: 5%;

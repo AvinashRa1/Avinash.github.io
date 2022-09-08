@@ -169,9 +169,20 @@ body{
         margin-left: 10px;
         margin-top: 10px;
     }
-    .flex-top p, .flex-mid p{
+    .sub-heading_by{
+        font-size: 20px;
+        line-height: 1.8;
+    }
+    .flex-top p{
         width: 95%;
         line-height: 1.5;
+        margin-left: 0;
+    }
+    .flex-mid p{
+        width: 100%;
+    }
+    .price{
+        margin: 10px 0;
     }
     .button_tea_01, .button_tea_02{
         margin: 0 40px;

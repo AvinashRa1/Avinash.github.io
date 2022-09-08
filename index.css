@@ -6,7 +6,7 @@ body{
     width: 70%;
     max-height: 35em;
     margin-left: 15%;
-    padding-top: 10px;
+    margin-top: 10px;
     border-radius: 10px;
 }
 
@@ -96,9 +96,12 @@ body{
         line-height: 1.6;
         font-size: 14px;
     }
+    #id{
+        text-align: center;
+    }
     .img-fluid{
         width: 90%;
-        margin: 0 15px 1% 5%;
+        margin: 10px 15px 1% 5%;
     }
     .heading{
         margin: 10px 0 10px 15px;
