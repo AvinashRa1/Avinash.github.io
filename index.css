@@ -4,7 +4,7 @@ body{
 
 .img-fluid{
     width: 70%;
-    max-height: 45em;
+    max-height: 35em;
     margin-left: 15%;
     margin-top: 10px;
     border-radius: 10px;
@@ -74,8 +74,8 @@ body{
 
 @media all and (max-width: 1197px) {
     .img-fluid{
-        width: 95%;
-        margin-left: 3%;
+        width: 96%;
+        margin: 10px 2%;
     }
     .para, .heading{
         width: 90%;
@@ -93,12 +93,16 @@ body{
     }
 }
 
-@media all and (max-width: 400px) {
+@media all and (max-width: 800px) {
     .para{
         width: 90%;
         margin-left: 15px;
         line-height: 1.6;
         font-size: 14px;
+    }
+    .img-fluid{
+        margin: 10px 15px;
+        height: 375px;
     }
     .heading{
         margin: 10px 0 10px 15px;
