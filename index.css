@@ -82,6 +82,9 @@ body{
         width: 90%;
         margin-left: 15px;
     }
+    #para{
+        width: 90%;
+    }
     .second_img, .ozone_img{
         margin: 10px 30%;
     }

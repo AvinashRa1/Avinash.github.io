@@ -3,9 +3,9 @@ body{
 }
 
 .img-fluid_don{
-    width: 70%;
+    width: 52%;
     max-height: 45em;
-    margin: 0 15%;
+    margin-left: 23%;
     margin-top: 10px;
     border-radius: 10px;
 }
@@ -26,7 +26,7 @@ body{
     margin-left: 20%;
     margin-bottom: 15px;
     width: 60%;
-    line-height: 2.1;
+    line-height: 1.9;
 }
 
 .products1{
@@ -144,5 +144,6 @@ body{
     .img-fluid_don, .don_container, .para_don{
         width: 90%;
         margin-left: 15px;
+        line-height: 1.8;
     }
 }

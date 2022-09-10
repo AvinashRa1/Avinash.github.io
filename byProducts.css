@@ -32,6 +32,10 @@ body{
     text-align: justify;
 }
 
+.details{
+    color:rgba(88, 88, 88, 0.842);
+}
+
 .flex-container{
     display: flex;
     flex-direction: column;
@@ -135,6 +139,9 @@ body{
 }
 
 @media all and (max-width: 1197px) {
+    .heading_by{
+        margin-left: 35px;
+    }
     .img-fluid_by, .para_by, .flex-container{
         width: 90%;
         margin-left: 40px;
@@ -165,6 +172,8 @@ body{
         width: 90%;
         margin-left: 19px;
         margin-bottom: 10px;
+        font-size: 14px;
+        line-height: 1.9;
     }
     .product_img, .product_img1{
         margin-left: 10px;
@@ -191,5 +200,12 @@ body{
     }
     .tea_sales_button{
         margin-left: 1px;
+    }
+}
+
+@media all and (max-width: 360px) {
+    .product_img1, .product_img{
+        width: 90%;
+        height: auto;
     }
 }
