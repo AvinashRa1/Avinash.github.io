@@ -3,10 +3,10 @@ body{
 }
 
 .img-fluid_plant{
-    width: 70%;
+    width: 60%;
     max-height: 45em;
-    margin-left: 15%;
-    padding-top: 10px;
+    margin-left: 20%;
+    margin-top: 10px;
     border-radius: 10px;
 }
 
@@ -139,7 +139,7 @@ td:nth-child(even), th:nth-child(even) {
 @media all and (max-width: 800px) {
     .img-fluid_plant, .para_plant, .flex-container, .tea_table, .loc_plant{
         width: 90%;
-        margin: 0 15px 1% 5%;
+        margin: 10px 15px 1% 5%;
     }
     .sub-heading_plant{
         font-size: 16px;

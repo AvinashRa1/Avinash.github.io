@@ -3,9 +3,9 @@ body{
 }
 
 .img-fluid_by{
-    width: 80%;
+    width: 60%;
     max-height: 45em;
-    margin-left: 10%;
+    margin-left: 20%;
     margin-top: 10px;
     border-radius: 10px;
 }
