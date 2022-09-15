@@ -34,6 +34,7 @@ nav .logo{
     float: left;
     padding-left: 60px;
     padding-top: 10px;
+    display: flex;
 }
 
 nav .logo img{
