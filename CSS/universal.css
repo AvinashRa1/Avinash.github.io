@@ -141,6 +141,12 @@ nav ul ul li a{
     }
 }
 
+@media all and (max-width: 550px) {
+    .logo{
+        margin-left: 29%;
+    }
+}
+
 @media all and (max-width: 500px) {
     .logo{
         margin-left: 28%;
