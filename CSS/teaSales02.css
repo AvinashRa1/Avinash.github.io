@@ -153,7 +153,7 @@ body{
     transition: .5s;
 }
 
-@media (max-width: 1197px) {
+@media all and (max-width: 1197px) {
     .flex_intro{
         flex-direction: column;
     }
@@ -179,7 +179,7 @@ body{
     }
 }
 
-@media (max-width: 800px) {
+@media all and (max-width: 800px) {
     .heading_sales01{
         margin-left: 50px;
         width: 80%;
@@ -196,7 +196,7 @@ body{
         margin-left: 10px;
     }
     .second_img{
-        margin-left: 10%;
+        margin-left: 5%;
     }
     .prod_head{
         margin-left: 80px;
@@ -205,5 +205,11 @@ body{
         width: 90%;
         font-size: 14px;
         margin-bottom: 10px;
+    }
+}
+
+@media all and (max-width: 350px) {
+    .second_img{
+        margin-left: 1%;
     }
 }
