@@ -141,7 +141,11 @@ body{
         margin-left: 5%;
         margin-top: 20px;
     }
-    .img-fluid_don, .don_container, .para_don{
+    .img-fluid_don{
+        width: 90%;
+        margin-left: 5%;
+    }
+    .don_container, .para_don{
         width: 90%;
         margin-left: 15px;
         line-height: 1.8;

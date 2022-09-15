@@ -156,11 +156,14 @@ body{
 @media (max-width: 1197px) {
     .flex_intro{
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     .second_img{
-        margin-left: 35%;
+        margin: 0;
     }
     .para_sales01{
+        margin: 0;
         width: 60%;
     }    
     .flex_prod, .flex_prod2{
@@ -188,10 +191,11 @@ body{
     }
     .para_sales01, .para2_sales01{
         width: 90%;
-        margin-left: 20px;
         padding-right: 0;
-        line-height: 1.9;
         font-size: 14px;
+    }
+    .para2_sales01{
+        margin-left: 5%;
     }
     .img-fluid_sales1{
         width: 95%;
