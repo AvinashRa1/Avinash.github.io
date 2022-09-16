@@ -120,7 +120,7 @@ body{
 .prod1_img, .prod2_img, .prod3_img{
     width: 200px;
     height: 180px;
-    border-radius: 40px;
+    border-radius: 10px;
 }
 
 .purchase{
