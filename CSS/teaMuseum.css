@@ -62,6 +62,26 @@ body{
     border-radius: 10px;
 }
 
+.button{
+    background-color: var(--third-color);
+    border: none;
+    color: var(--fifth-color);
+    padding: 2px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    cursor: pointer;
+    border-radius: 9px;
+    margin-bottom: 20px;
+    margin-left: 20%;
+}
+
+.button:hover{
+    background-color: var(--second-color);
+    transition: .5s;
+}
+
 @media all and (max-width: 1197px) {
     .img-fluid_mus2{
         width: 300px;

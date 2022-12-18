@@ -135,6 +135,120 @@ body{
     margin-top: 10px;
 }
 
+.form{
+    margin-left: 30%;
+    margin-bottom: 20px;
+    width: 40%;
+    line-height: 1.5;
+    background-color: rgb(60, 200, 60);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.inputGroup{
+    background-color: #fff;
+    display: block;
+    margin: 10px 0;
+    position: relative;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+.checkLabel{
+      padding: 12px 30px;
+      width: 100%;
+      display: block;
+      color: #000000;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+}
+
+.check:checked ~ .checkLabel{
+      background: rgb(89, 215, 89);
+      border-radius: 5px;
+      transition: .5s;
+}
+
+
+.check{
+      width: 32px;
+      height: 32px;
+      position: absolute;
+      right: 30px;
+      top: 50%;
+      cursor: pointer;
+      visibility: hidden;
+}
+
+.personalDetails{
+    display: flex;
+}
+
+.address{
+    margin-left: 10px;
+}
+
+.fname, .address{
+    margin-right: 10px;
+}
+
+.input{
+    border-radius: 5px;
+    border: 2px solid black;
+    height: 30px;
+    width: 90%;
+}
+
+#cardNum{
+    width: 80%;
+}
+
+#MM, #YY{
+    width: 30%;
+}
+
+
+.cardDetailsFlex, .thirdCardDetailsFlex, .flex, .personalDetails{
+    display: flex;
+}
+
+.fourthCardDetailsFlex{
+    margin-left: -80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.flex{
+    align-items: center;
+    justify-content: center;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    margin-right: 70px;
+}
+
+.submitBtn{
+    padding: 10px;
+    margin-top: 30px;
+    border-radius: 5px;
+    background: rgb(255, 247, 0);
+}
+
+.submitBtn:hover{
+    background: rgb(255, 162, 0);
+    transition: .5s;
+    cursor: pointer;
+}
+
+.alert{
+    color: red;
+}
+
 @media all and (max-width: 800px) {
     .heading{
         width: 90%;

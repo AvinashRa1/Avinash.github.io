@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="This page is for booking tickets for the tour for the tea museum">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Booking</title>
+    <link rel="stylesheet" href="CSS/booking.css">
+    <link rel="stylesheet" href="CSS/universal.css">
+    <link rel="stylesheet" href="CSS/normalise.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="Images/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="Images/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="Images/browserconfig.xml">
+    <meta name="theme-color" content="#0b0b0b">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo"> <!--Nav Bar Logo-->
+                <a href="#"><img src="Images/Ceylon_Tea_logo.png"></a>
+            </div>
+            <ul>
+                <li><a class="active" href="index.html">Home</a></li> <!--Link to Home Page-->
+                <li><a href="teaPlantations.html">Tea Plantations</a></li> <!--Link to Tea Plantations Page-->
+                <li><a href="teaMuseum.html">Ceylon Tea Museum</a></li> <!--Link to Tea Museaum Page-->
+                <li><a href="byProducts.html">By Products of Tea</a></li> <!--Link to By Products Page-->
+                <li>        
+                    <a href="#">Tea Sales</a>
+                    <ul> <!--Hover Drop Down List-->
+                        <li><a href="teaSales01.html">Tea Sales 1</a></li> <!--Link to Tea Sales 01 Page-->
+                        <li><a href="teaSales02.html">Tea Sales 2</a></li> <!--Link to Tea Sales 02 Page-->
+                    </ul>
+                </li>
+                <li><a href="purchaseDon.html">Purchase and Donate</a></li> <!--Link to Purchase and Donate Page-->
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <form class="form" id="ticketForm">
+            <section>
+                    <h3 class="top" >Dates</h3><br>
+                    <input type="date" name="date" id="datePicker" class="input" required><br><br>
+            </section>
+            <section>
+                    <h3>Guests</h3><br>
+                    <label for="fname">Full Name</label><br>
+                    <input type="text" id="fname" name="fname" class="input" >
+                    <div id="nameAlert" class="alert"></div><br>
+            
+                    <label for="mnum">Mobile Number</label><br>
+                    <input type="text" id="mnum" name="mnum" class="input" placeholder="+94 **********" >
+                    <div id="numAlert" class="alert"></div><br>
+            
+                    <label for="email">Email</label><br>
+                    <input type="text" id="email" name="email" class="input" placeholder="example@gmail.com" ><br><br>
+            
+                    <label for="cemail">Confirm Email</label><br>
+                    <input type="text" id="cemail" name="cemail" class="input" placeholder="example@gmail.com" >
+                    <div id="emailAlert" class="alert"></div><br>
+            
+                    <label for="gender">Gender</label><br>
+                    <select id="gender" class="input" >
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select><br><br>
+
+                    <div class="flex">
+                        <h4>Sri Lankan Adult</h4>
+                        <div class="wrapper">
+                            <span class="minus">-</span>
+                            <span class="num" id="1">0</span>
+                            <span class="plus">+</span>
+                        </div>
+                    </div>
+
+                    <div class="flex">
+                        <h4>Sri Lankan Child</h4>
+                        <div class="wrapper">
+                            <span class="minus">-</span>
+                            <span class="num" id="2">0</span>
+                            <span class="plus">+</span>
+                        </div>
+                    </div>
+
+                    <div class="flex">
+                        <h4>Foreigner Adult</h4>
+                        <div class="wrapper">
+                            <span class="minus">-</span>
+                            <span class="num" id="3">0</span>
+                            <span class="plus">+</span>
+                        </div>
+                    </div>
+
+                    <div class="flex">
+                        <h4>Foreigner Child</h4>
+                        <div class="wrapper">
+                            <span class="minus">-</span>
+                            <span class="num" id="4">0</span>
+                            <span class="plus">+</span>
+                        </div>
+                    </div>
+
+                    <div class="flex">
+                        <h4>Infant <br> (Under 4 Years) </h4>
+                        <div class="wrapper">
+                            <span class="minus">-</span>
+                            <span class="num" id="5">0</span>
+                            <span class="plus">+</span>
+                        </div>
+                    </div>
+
+                    <div id="ticketAlert" class="alert"></div>
+
+                </section>
+            <section><br>
+                    <h3>Duration</h3>
+                    <div>*Please select duration after choosing tickets</div><br>
+                    <label for="dur">Duration :</label>
+                    <select name="duration" id="duration">
+                        <option value="3">3 Hours</option>
+                        <option value="12"> Half a Day</option>
+                        <option value="24">Full Day</option>
+                    </select><br><br>
+            </section>
+            <section>
+                <h3>Current Price</h3><br>
+                <span id="cost">0</span><span>.00 LKR</span><br><br>
+                <div>
+                    <button type="button" class="button" id="checkLoyalty">Check Loyalty</button>
+                    <input type="text" id="loyalty" class="input" readonly>
+                </div>
+            </section><br>
+            <div>
+                <button type="submit" class="button" id="add" name="add">Add to Order</button>
+                <button type="submit" class="button" id="place" name="place">Place Order</button>
+                <button type="button" class="button" id="remove" name="remove">Remove Order</button>
+            </div>
+            <div>
+                <button type="submit" class="button" id="addToFavourite" name="addFav">Add Order to Favourites</button>
+                <button type="submit" class="button" id="orderFavourite" name="orderFav">Order Favourites</button>
+            </div>
+        </form>
+        <div class="tables">
+            <table class="displayPrices">
+                <tr>
+                    <th>Type</th>
+                    <th>Prices (LKR)</th>
+                </tr>
+                <tr>
+                    <td>SL Adult Ticket</td>
+                    <td>1200.00</td>
+                </tr>
+                <tr>
+                    <td>SL Child Ticket</td>
+                    <td>700.00</td>
+                </tr>
+                <tr>
+                    <td>Foreigner Adult Ticket</td>
+                    <td>5500.00</td>
+                </tr>
+                <tr>
+                    <td>Foreigner Child Pass</td>
+                    <td>2700.00</td>
+                </tr>
+                <tr>
+                    <td>Infant (Foreigner or SL)</td>
+                    <td>Free</td>
+                </tr>
+            </table>
+            <table class="extraCharges">
+                <tr>
+                    <th>Duration</th>
+                    <th>SL Extra Charges(LKR)</th>
+                    <th>Foreigner Extra Charges(LKR)</th>
+                </tr>
+                <tr>
+                    <th>3 Hours</th>
+                    <td>No Additional Charges</td>
+                    <td>No Additional Charges</td>
+                </tr>
+                <tr>
+                    <th>Half A Day</th>
+                    <td>350 per Person</td>
+                    <td>450 per Person</td>
+                </tr>
+                <tr>
+                    <th>Full Day</th>
+                    <td>600 per Person</td>
+                    <td>800 per Person</td>
+                </tr>
+            </table>
+            <table class="overalOrder">
+                <tr>
+                    <th>Tickets</th>
+                    <th>Total</th>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td id="addName"></td>
+                </tr>
+                <tr>
+                    <td>Sri Lankan Adult Tickets</td>
+                    <td id="addSlAdultTickets"></td>
+                </tr>
+                <tr>
+                    <td>Sri Lankan Child Tickets</td>
+                    <td id="addSlChildTickets"></td>
+                </tr>
+                <tr>
+                    <td>Foreigner Adult Tickets</td>
+                    <td id="addFAdultTickets"></td>
+                </tr>
+                <tr>
+                    <td>Foreigner Child Tickets</td>
+                    <td id="addFChildTickets"></td>
+                </tr>
+                <tr>
+                    <td>Infant Tickets</td>
+                    <td id="addInfantTickets"></td>
+                </tr>
+                <tr>
+                    <td>Total Price (LKR)</td>
+                    <td id="addTotalPrice"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        <div class="main-content">
+            <div class="left box">
+                <h2>Quick Links</h2>
+                <div class="content"> <!--Quick Links in Footer-->
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="teaPlantations.html">Tea Plantations</a></li>
+                        <li><a href="teaMuseum.html">Ceylon Tea Museum</a></li>
+                        <li><a href="byProducts.html">By Products of Tea</a></li>
+                        <li><a href="teaSales01.html">Tea Sales 1</a></li>
+                        <li><a href="teaSales02.html">Tea Sales 2</a></li>
+                        <li><a href="purchaseDon.html">Purchase and Donate</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="center box">
+                <h2>About Us</h2>
+                <div class="content"> <!--About Us and Copyright-->
+                    <p class="about">
+                        We strive to present the beauty of our land, Sri Lanka's Tea Plantations as well as the products that they can provide for our local citizens as well as foreign citizens who visit.
+                    </p>
+                    <p class="cc">
+                        Copyright (2002) All rights reserved.
+                    </p>
+                </div>
+            </div>
+
+            <div class="right box">
+                <h2>Contact Details</h2> <!--Phone Number, Email and Social Media Details-->
+                <div class="content">
+                    <div class="phone">
+                        <span class="text">+94 76-123-4567</span>
+                    </div>
+                    <div class="email">
+                        <span class="text">********@gmail.com</span>
+                    </div>
+                    <div class="social">
+                        <a href="#"><img src="Images/icons8-twitter-30.webp" alt="Twitter Icon"></a>
+                        <a href="#"><img src="Images/icons8-youtube-30.webp" alt="Youtube Icon"></a>
+                        <a href="#"><img src="Images/icons8-instagram-30.webp" alt="Instagram Icon"></a>
+                        <a href="#"><img src="Images/icons8-facebook-30.webp" alt="Facebook Icon"></a>
+                    </div>
+                </div> 
+            </div>
+
+        </div>
+    </footer>
+    <script src="Script/booking.js"></script>
+</body>
+</html>
