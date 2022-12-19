@@ -43,6 +43,7 @@ const infant = document.getElementById("5");
 const txtCost = document.getElementById("cost");
 
 const btnAdd = document.getElementById("add");
+const btnPlace = document.getElementById("place")
 const btnRemove = document.getElementById("remove")
 const btnAddToFavourites = document.getElementById("addToFavourite")
 const btnOrderFavourites = document.getElementById("orderFavourite")
@@ -206,6 +207,7 @@ let tempSlChildTickets = 0;
 let tempFAdultTickets = 0;
 let tempFChildTickets = 0;
 let tempInfantTickets = 0;
+let tempTicketTotal = 0;
 
 function addToOrder(evt){
     if(ticketForm.checkValidity()){
@@ -231,6 +233,8 @@ function addToOrder(evt){
                         addFChildTkts.innerText = tempFChildTickets;
                         tempInfantTickets += infantNum;
                         addInfantTkts.innerText = tempInfantTickets;
+
+                        tempTicketTotal = tempSlAdultTickets + tempSlChildTickets + tempFAdultTickets + tempFChildTickets + tempInfantTickets;
             
                         temp += (cost + totDuration)
                         addTotPrice.innerText = temp
@@ -270,6 +274,39 @@ function addToOrder(evt){
 }
 
 btnAdd.addEventListener("click", addToOrder);
+
+function placeOrder(evt){
+    if(ticketForm.checkValidity()){
+        evt.preventDefault();
+        if(tempTicketTotal > 0)
+        {
+            addFullName.innerText = ""
+            addSlAdultTkts.innerText = 0;
+            addSlChildTkts.innerText = 0;
+            addFAdultTkts.innerText = 0;
+            addFChildTkts.innerText = 0
+            addInfantTkts.innerText = 0
+            addTotPrice.innerText = 0;
+
+            slAdult.innerText = 0;
+            slChild.innerText = 0;
+            fAdult.innerText = 0;
+            fChild.innerText = 0;
+            infant.innerText = 0; 
+
+            slAdultNum = 0
+            slChildNum = 0 
+            fAdultNum = 0;
+            fChildNum = 0;
+            infantNum = 0;
+            txtCost.innerText = 0.00;
+
+            alert("Thank you for your purchase");
+        }
+    }
+}
+
+btnPlace.addEventListener("click", placeOrder)
 
 function removeOrder(evt){
     if(ticketForm.checkValidity()){
