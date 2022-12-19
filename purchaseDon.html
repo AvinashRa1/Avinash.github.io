@@ -25,7 +25,7 @@
 
     <header>
         <nav>
-            <div class="logo"><a href="#"><img src="Images/Ceylon_Tea_logo.png"></a></div>
+            <div class="logo"><a href="#"><img src="Images/Ceylon_Tea_logo.png" alt="Tea Logo"></a></div>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="teaPlantations.html">Tea Plantations</a></li>
@@ -111,7 +111,7 @@
         </p>
         <div class="don_container">
             <h3 class="don_heading">Support a Student, Strengthen a Community by Tea Leaf Trust</h3>
-            <img src="Images/don_img.webp" alt="Donations Image" srcset="Images/don_img.jpg" class="don_img">
+            <img src="Images/don_img.webp" alt="Donation page Image" srcset="Images/don_img.jpg" class="don_img">
             <p class="don_para" id="justify">
                 <b>Summary</b><br>
                 Education is essential in empowering young people from tea estate communities in Sri Lanka to expand
@@ -137,36 +137,40 @@
         <form id="donationForm">
             <h2>Donation Form</h2>
             <h3>Donation Options</h3>
-            <div class="inputGroup">
-                <input class="check" id="option1" name="check" value="100" type="checkbox"/>
-                <label class="checkLabel" for="option1">100 LKR</label>
-              </div>
-              
-              <div class="inputGroup">
-                <input class="check" id="option2" name="check" value="500" type="checkbox"/>
-                <label class="checkLabel" for="option2">500 LKR</label>
-              </div>
 
-              <div class="inputGroup">
-                <input class="check" id="option3" name="check" value="1000" type="checkbox"/>
-                <label class="checkLabel" for="option3">1,000 LKR</label>
-              </div>
-              
-              <div class="inputGroup">
-                <input class="check" id="option4" name="check" value="2000" type="checkbox"/>
-                <label class="checkLabel" for="option4">2,000 LKR</label>
-              </div>
-
-              <div class="inputGroup">
-                <input class="check" id="option5" name="check" value="5000" type="checkbox"/>
-                <label class="checkLabel" for="option5">5,000 LKR</label>
-              </div>
-              
-              <div class="inputGroup">
-                <input class="check" id="option6" name="check" value="10000" type="checkbox"/>
-                <label class="checkLabel" for="option6">10,000 LKR</label>
-              </div>
-              <div id="alertDonations" class="alert"></div><br>
+            <fieldset class="field_set">
+                <legend></legend>
+                <div class="inputGroup">
+                    <input class="check" id="option1" name="check" value="100" type="checkbox"/>
+                    <label class="checkLabel" for="option1">100 LKR</label>
+                  </div>
+                  
+                  <div class="inputGroup">
+                    <input class="check" id="option2" name="check" value="500" type="checkbox"/>
+                    <label class="checkLabel" for="option2">500 LKR</label>
+                  </div>
+    
+                  <div class="inputGroup">
+                    <input class="check" id="option3" name="check" value="1000" type="checkbox"/>
+                    <label class="checkLabel" for="option3">1,000 LKR</label>
+                  </div>
+                  
+                  <div class="inputGroup">
+                    <input class="check" id="option4" name="check" value="2000" type="checkbox"/>
+                    <label class="checkLabel" for="option4">2,000 LKR</label>
+                  </div>
+    
+                  <div class="inputGroup">
+                    <input class="check" id="option5" name="check" value="5000" type="checkbox"/>
+                    <label class="checkLabel" for="option5">5,000 LKR</label>
+                  </div>
+                  
+                  <div class="inputGroup">
+                    <input class="check" id="option6" name="check" value="10000" type="checkbox"/>
+                    <label class="checkLabel" for="option6">10,000 LKR</label>
+                  </div>
+                  <div id="alertDonations" class="alert"></div><br>    
+            </fieldset>
 
               <h3>Personal Details</h3><br>
               <div class="personalDetails">
@@ -191,20 +195,22 @@
               <div>
                 <div class="cardDetailsFlex">
                     <div class="secondCardDetailsFlex">
-                        <label for="expiryDate">Expiry Date</label>
+                        <h4>Expiry Date</h4>
                         <div class="thirdCardDetailsFlex">
                             <div class="column">
+                                <label for="MM" class="none">:</label>
                                 <input type="tel" maxlength="2" id="MM" name="expiryDate" placeholder=" MM" class="input">
                                 <div id="alertMM" class="alert"></div>
                             </div>
                             <div class="column">
+                                <label for="YY" class="none">:</label>
                                 <input type="tel" maxlength="4" id="YY" name="expiryDate" placeholder=" YY" class="input">
                                 <div id="alertYY" class="alert"></div>
                             </div>
                         </div>
                     </div>
                     <div class="fourthCardDetailsFlex">
-                        <label for="CVC/CVV">CVC/CVV</label>
+                        <label for="cvc">CVC/CVV</label>
                         <input type="tel" maxlength="3" id="cvc" name="CVC/CVV" class="input">
                         <div id="alertCVC" class="alert"></div>
                     </div>
@@ -258,10 +264,10 @@
                         <span class="text">********@gmail.com</span>
                     </div>
                     <div class="social">
-                        <a href="#"><img src="Images/icons8-twitter-30.png"></a>
-                        <a href="#"><img src="Images/icons8-youtube-30.png"></a>
-                        <a href="#"><img src="Images/icons8-instagram-30.png"></a>
-                        <a href="#"><img src="Images/icons8-facebook-30.png"></a>
+                        <a href="#"><img src="Images/icons8-twitter-30.png" alt="twitter icon"></a>
+                        <a href="#"><img src="Images/icons8-youtube-30.png" alt="youtube icon"></a>
+                        <a href="#"><img src="Images/icons8-instagram-30.png" alt="instagram icon"></a>
+                        <a href="#"><img src="Images/icons8-facebook-30.png" alt="facebook icon"></a>
                     </div>
                 </div>
             </div>

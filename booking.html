@@ -24,7 +24,7 @@
     <header>
         <nav>
             <div class="logo"> <!--Nav Bar Logo-->
-                <a href="#"><img src="Images/Ceylon_Tea_logo.png"></a>
+                <a href="#"><img src="Images/Ceylon_Tea_logo.png" alt="Tea Logo"></a>
             </div>
             <ul>
                 <li><a href="index.html">Home</a></li> <!--Link to Home Page-->
@@ -47,6 +47,7 @@
         <form class="form" id="ticketForm">
             <section>
                     <h3 class="top" >Dates</h3><br>
+                    <label for="datePicker">Date :</label>
                     <input type="date" name="date" id="datePicker" class="input" required><br><br>
             </section>
             <section>
@@ -123,7 +124,7 @@
             <section><br>
                     <h3>Duration</h3>
                     <div>*Please select duration after choosing tickets</div><br>
-                    <label for="dur">Duration :</label>
+                    <label for="duration">Duration :</label>
                     <select name="duration" id="duration">
                         <option value="3">3 Hours</option>
                         <option value="12"> Half a Day</option>
@@ -135,6 +136,7 @@
                 <span id="cost">0</span><span>.00 LKR</span><br><br>
                 <div>
                     <button type="button" class="button" id="checkLoyalty">Check Loyalty</button>
+                    <label for="loyalty"> : </label>
                     <input type="text" id="loyalty" class="input" readonly>
                 </div>
             </section><br>

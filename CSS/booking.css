@@ -27,7 +27,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: green;
+    background: rgb(122, 192, 122);
     border-radius: 10px;
     border: 2px solid black;
 }
@@ -57,7 +57,7 @@ h4{
 }
 
 .plus:hover , .minus:hover{
-    background: lightgreen;
+    background: rgb(14, 110, 14);
     transition: 0.5s;
     border-radius: 5px;
 }

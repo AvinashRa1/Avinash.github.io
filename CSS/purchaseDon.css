@@ -253,6 +253,10 @@ body{
     color: red;
 }
 
+.none{
+    display: none;
+}
+
 @media all and (max-width: 800px) {
     .heading{
         width: 90%;
