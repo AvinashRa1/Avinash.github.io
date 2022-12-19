@@ -207,7 +207,11 @@ body{
 }
 
 #MM, #YY{
-    width: 30%;
+    width: 50px;
+}
+
+#YY{
+    margin-left: -60px;
 }
 
 
@@ -216,9 +220,9 @@ body{
 }
 
 .fourthCardDetailsFlex{
-    margin-left: -80px;
     display: flex;
     flex-direction: column;
+    margin-left: 10px;
 }
 
 .flex{
@@ -263,5 +267,21 @@ body{
         width: 90%;
         margin-left: 15px;
         line-height: 1.8;
+    }
+    .form{
+        width: 90%;
+        margin: 4%;
+    }
+    #MM, #YY{
+        width: 50px;
+    }
+    #YY{
+        margin-left: -60px;
+    }
+    .fourthCardDetailsFlex{
+        margin-left: 10px;
+    }
+    .personalDetails{
+        flex-direction: column;
     }
 }
