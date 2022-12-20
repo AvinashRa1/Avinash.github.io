@@ -93,6 +93,14 @@ h4{
     padding: 5px 5px;
 }
 
+.numCode{
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 5px;
+    background: black;
+    color: white;
+}
+
 .top{
     margin-top: 10px;
 }

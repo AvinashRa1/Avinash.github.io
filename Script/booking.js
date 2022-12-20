@@ -74,7 +74,7 @@ window.addEventListener("load", initial)
 
 function Add(event){ //function to incremenet
     let buttonClicked = event.target;
-    let input = buttonClicked.parentElement.children[1];
+    let input = buttonClicked.parentElement.children[1]; //converts the increment buttons into an array
     let inputValue = input.innerText;
     let newValue = parseInt(inputValue) + 1;
     input.innerText = newValue;
@@ -99,14 +99,14 @@ function Add(event){ //function to incremenet
     totTickets = (slAdultNum + slChildNum + fAdultNum + fChildNum + infantNum)
 }
 
-for(let i = 0; i < plus.length; i++){ //click event for increment
+for(let i = 0; i < plus.length; i++){ //click event for increment //uses a loop to listen to all 5 increment buttons
     let button = plus[i];
     button.addEventListener('click', Add)
 }
 
 function Minus(event){ //function to decrement
-    let buttonClicked = event.target;
-    let input = buttonClicked.parentElement.children[1];
+    let buttonClicked = event.target; 
+    let input = buttonClicked.parentElement.children[1]; //converts the decrement buttons into an array
     let inputValue = input.innerText;
     let newValue = parseInt(inputValue) - 1;
     if(newValue >= 0){
@@ -136,12 +136,12 @@ function Minus(event){ //function to decrement
     }
 }
 
-for(let i = 0; i < minus.length; i++){ //click event for decrement
-    let button = minus[i];
+for(let i = 0; i < minus.length; i++){ //click event for decrement //uses a loop to listen to all 5 decrement buttons
+    let button = minus[i]; //loops through the buttons in the array
     button.addEventListener('click', Minus)
 }
 
-function durPrice(){
+function durPrice(){ //uses if condition to check the select duration value
     let totDue = 0;
     if(slAdultNum > 0 ){
         if(optDur.value == "3"){
@@ -214,7 +214,7 @@ function addToOrder(evt){
         evt.preventDefault(); //important
         if(txtFullName.value.length > 10 && txtFullName.value != ""){ //name validation
             nmAlert.innerText = "";
-            if(txtPhoneNum.value.length == 13 && txtPhoneNum != ""){ //phone number validation
+            if(txtPhoneNum.value.length == 9 && txtPhoneNum != ""){ //phone number validation
                 numAlert.innerText = "";
                 if(txtConfirmEmail.value === txtEmail.value && txtEmail.value != ""){ //email validation
                     emAlert.innerText = "";       
@@ -234,22 +234,32 @@ function addToOrder(evt){
                         tempInfantTickets += infantNum;
                         addInfantTkts.innerText = tempInfantTickets;
 
-                        tempTicketTotal = tempSlAdultTickets + tempSlChildTickets + tempFAdultTickets + tempFChildTickets + tempInfantTickets;
+                        tempTicketTotal = tempSlAdultTickets + tempSlChildTickets + tempFAdultTickets + tempFChildTickets + tempInfantTickets; //temporary ticket total
             
                         temp += (cost + totDuration)
                         addTotPrice.innerText = temp
                         
-                        slAdult.innerText = 0;
+                        slAdult.innerText = 0; //resets the value after adding it to the order to prevent value looping
                         slChild.innerText = 0;
                         fAdult.innerText = 0;
                         fChild.innerText = 0;
                         infant.innerText = 0; 
+
+                        tempSlAdultTickets = 0;
+                        tempSlChildTickets = 0;
+                        tempFAdultTickets = 0;
+                        tempFChildTickets = 0;
+                        tempInfantTickets = 0
+                        tempTicketTotal = 0;
+                        txtLoyalty.value = 0;
 
                         slAdultNum = 0
                         slChildNum = 0 
                         fAdultNum = 0;
                         fChildNum = 0;
                         infantNum = 0;
+                        cost = 0
+                        totDuration = 0
                         txtCost.innerText = 0.00;
                     }
                     else{
@@ -280,7 +290,7 @@ function placeOrder(evt){
         evt.preventDefault();
         if(tempTicketTotal > 0)
         {
-            addFullName.innerText = ""
+            addFullName.innerText = "" //once placing order all the values and text inputs are reset
             addSlAdultTkts.innerText = 0;
             addSlChildTkts.innerText = 0;
             addFAdultTkts.innerText = 0;
@@ -294,6 +304,14 @@ function placeOrder(evt){
             fChild.innerText = 0;
             infant.innerText = 0; 
 
+            tempSlAdultTickets = 0;
+            tempSlChildTickets = 0;
+            tempFAdultTickets = 0;
+            tempFChildTickets = 0;
+            tempInfantTickets = 0
+            tempTicketTotal = 0;
+            txtLoyalty.value = 0;
+
             slAdultNum = 0
             slChildNum = 0 
             fAdultNum = 0;
@@ -301,7 +319,7 @@ function placeOrder(evt){
             infantNum = 0;
             txtCost.innerText = 0.00;
 
-            alert("Thank you for your purchase");
+            alert("Thank you for your purchase"); //placeholder for popup message
         }
     }
 }
@@ -311,16 +329,22 @@ btnPlace.addEventListener("click", placeOrder)
 function removeOrder(evt){
     if(ticketForm.checkValidity()){
         evt.preventDefault();
-        slAdultNum = 0;
+        slAdultNum = 0; //to reset the values and remove the order
         slChildNum = 0;
         fAdultNum = 0;
         fChildNum = 0;
         infantNum = 0;
-        addSlAdultTkts.innerText = slAdultNum;
-        addSlChildTkts.innerText = slChildNum;
-        addFAdultTkts.innerText = fAdultNum;
-        addFChildTkts.innerText = fChildNum;
-        addInfantTkts.innerText = infantNum;
+        addSlAdultTkts.innerText = 0;
+        addSlChildTkts.innerText = 0;
+        addFAdultTkts.innerText = 0;
+        addFChildTkts.innerText = 0;
+        addInfantTkts.innerText = 0;
+        tempSlAdultTickets = 0;
+        tempSlChildTickets = 0;
+        tempFAdultTickets = 0;
+        tempFChildTickets = 0;
+        tempInfantTickets = 0
+        tempTicketTotal = 0;
         txtLoyalty.value = 0;
         addTotPrice.innerText = 0.00;
         temp = 0;
@@ -334,16 +358,16 @@ let JSONfavourite;
 function addToFavourites(evt){
     if(ticketForm.checkValidity()){
         evt.preventDefault();
-        if(txtFullName.value.length > 10 && txtFullName.value != ""){
+        if(txtFullName.value.length > 10 && txtFullName.value != ""){ //name validation
             nmAlert.innerText = "";
-            if(txtPhoneNum.value.length == 13 && txtPhoneNum != ""){
+            if(txtPhoneNum.value.length == 9 && txtPhoneNum != ""){ //number validation
                 numAlert.innerText = "";
-                if(txtConfirmEmail.value === txtEmail.value && txtEmail.value != ""){
+                if(txtConfirmEmail.value === txtEmail.value && txtEmail.value != ""){ //email validation
                     emAlert.innerText = "";       
-                    if(totTickets > 0){
+                    if(totTickets > 0){ //ticket valdidation in case the user has selected 0 tickets
                         tktAlert.innerText = ""
                         favourite = {fullName : txtFullName.value, phoneNumber : txtPhoneNum.value, email : txtEmail.value, gender : selectGender.value, slAdultTicket : slAdultNum, slChildTicket : slChildNum, fAdultTicket : fAdultNum, fChildTicket : fChildNum, infantTicket : infantNum, duration : optDur.value, totalPrice : parseInt(txtCost.innerText)};
-                        JSONfavourite = JSON.stringify(favourite)
+                        JSONfavourite = JSON.stringify(favourite) //to store the values
                         localStorage.setItem("favourite", JSONfavourite)
                     }
                     else{
@@ -372,10 +396,11 @@ btnAddToFavourites.addEventListener("click", addToFavourites)
 function orderFavourites(evt){
     if(ticketForm.checkValidity()){
         evt.preventDefault();
-        let getFav = localStorage.getItem("favourite", JSONfavourite)
+        let getFav = localStorage.getItem("favourite", JSONfavourite) //to retrieve the values
         let getFavourite = JSON.parse(getFav)
-        addFullName.innerText = getFavourite["fullName"]
-        getFavourite["slAdultTicket"] += tempSlAdultTickets;
+
+        addFullName.innerText = getFavourite["fullName"] //to set the retrieve values to the relevant fields
+        getFavourite["slAdultTicket"] += tempSlAdultTickets; //the temp values the add the existing order to the favourites
         addSlAdultTkts.innerText = getFavourite["slAdultTicket"]
         getFavourite["slChildTicket"] += tempSlChildTickets;
         addSlChildTkts.innerText = getFavourite["slChildTicket"]
@@ -399,14 +424,18 @@ function checkLoyalty(){
     if(tktLoyalty > 3){
         for(let x = 0; x < tktLoyalty; x++)
         {
-            loyaltyTemp += 15
+            loyaltyTemp += 15 //loyalty variable
         }
-        txtLoyalty.value = loyaltyTemp; //to display the loaylty points
 
         let loyalty = {loyaltyPoints : loyaltyTemp};  
         let JSONloyalty = JSON.stringify(loyalty);
         localStorage.setItem("loyalties", JSONloyalty); //to store the loyalty points
-        loyaltyTemp = 0;
+
+        let getLoyal = localStorage.getItem("loyalties", JSONloyalty) //to retrieve the loyalty points
+        let getLoyalty = JSON.parse(getLoyal);
+
+        txtLoyalty.value = getLoyalty["loyaltyPoints"]; //to display the loyalty points
+        loyaltyTemp = 0; //resets the values to prevent adding it over and over again
     }
     else{
         txtLoyalty.value = 0;
